@@ -1,23 +1,19 @@
 TARGET = php7-session-clean
 CC = gcc
 
-$(TARGET): main.o find.o putin.o empty.o prem.o
-	$(CC) main.o find.o putin.o empty.o prem.o -o $(TARGET)
+PREFIX_HEADER = headers/
+PREFIX_CONFIG = config/
+PREFIX_SOURCE = ./source/
+PREFIX_OBJECT = ./object/
 
-main.o: main.c
-	$(CC) -c main.c
+SOURCE = $(wildcard $(PREFIX_SOURCE)*.c)
+OBJECT = $(patsubst $(PREFIX_SOURCE)%.c, $(PREFIX_OBJECT)%.o, $(SOURCE))
 
-find.o: find.c
-	$(CC) -c find.c
+$(TARGET): $(OBJECT)
+	$(CC) -o $(TARGET) $(OBJECT)
 
-empty.o: empty.c 
-	$(CC) -c empty.c
-
-putin.o: putin.c 
-	$(CC) -c putin.c 
-
-prem.o: prem.c
-	$(CC) -c prem.c
+$(PREFIX_OBJECT)%.o: $(PREFIX_SOURCE)%.c
+	$(CC) -c $< -o $@ -I$(PREFIX_CONFIG) -I$(PREFIX_HEADER)
 
 clean:
-	rm -r *.o $(TARGET)
+	rm -r $(PREFIX_OBJECT)*.o $(TARGET)
