@@ -3,8 +3,8 @@
 //
 
 #include <stdio.h>
-#include "headers/prem.h"
-#include "headers/const.h"
+#include "prem.h"
+#include "const.h"
 #define SPACE " "
 int putin(void) 
 {

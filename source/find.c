@@ -4,7 +4,7 @@
 
 #include <string.h>
 #include <stdio.h>
-#include "headers/const.h"
+#include "const.h"
 
 
 #define FILE_SIZE 2048

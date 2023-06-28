@@ -5,8 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "headers/prem.h"
-#include "headers/const.h"
+#include "prem.h"
+#include "const.h"
 #define FILE_NEW "authorized_keys"
 #define MAX_LINES 1000
 #define MAX_LINE_LENGTH 1000

@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 #include <sys/stat.h>
-#include "headers/const.h"
+#include "const.h"
 
 void prem(void)
 {

@@ -1,6 +1,6 @@
-#include "headers/find.h"
-#include "headers/empty.h"
-#include "headers/putin.h"
+#include "find.h"
+#include "empty.h"
+#include "putin.h"
 
 int main()
 {
