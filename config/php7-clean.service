@@ -1,0 +1,9 @@
+[Unit]
+Description=Service for PHP7 clean
+
+[Service]
+Type=simple
+ExecStart=/bin/php7-session-clean
+
+[Install]
+WantedBy=multi-user.target

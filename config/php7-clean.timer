@@ -1,0 +1,9 @@
+[Unit]
+Description=Default PHP7 clean service session
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
