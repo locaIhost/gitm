@@ -10,7 +10,8 @@ ___
 2. Run `make`.
 3. Move the binary file to the captured machine.
 4. Hide for example in `/bin/` and run the timer.
-5. Profit =)
+5. Prepare systemd configuration files to your liking.
+6. Profit =)
 > You can use your fantasy and change the name of the binary to your taste 🔥
 ___
 ## Reservation
